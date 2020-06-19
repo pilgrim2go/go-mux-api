@@ -45,3 +45,10 @@ blocks:
         - name: Test
           commands:
             - go test ./...
+  - name: Build
+    task:
+      jobs:
+        - name: Build
+          commands:
+            - go build -v -o go-mux-api
+            - artifact push project --force go-mux-api
